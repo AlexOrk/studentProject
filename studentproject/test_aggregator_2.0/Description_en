@@ -1,0 +1,14 @@
+Task "Aggregator" (level08.lecture15) was taken from https://javarush.ru/
+The task has been greatly changed.
+Telegram bot generates vacancies for keywords entered by the user.
+Job vacancies are sent in pdf format.
+The connection occurs through a proxy server.
+Currently it works in the "for verified user" mode. In future versions,
+multi-user mode will appear, the application will be implemented by Spring.
+
+In the heroku branch, the application has been changed for use on Heroku.
+
+The project uses the Jsoup library.
+The project is implemented through the Strategy and MVC patterns, HTML parsing is used.
+The itextpdf library is used to convert to a pdf file.
+Logging is done using log4j and slf4j.
