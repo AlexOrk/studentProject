@@ -1,0 +1,6 @@
+Task "Aggregator" (level08.lecture15) was taken from https://javarush.ru/
+Added some changes.
+Implemented the java related job aggregator.
+
+The project uses the Jsoup library.
+The project is implemented through the Strategy and MVC patterns, HTML parsing is used.
