@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous">
+
+    <!-- Individual CSS -->
+    <link rel="stylesheet" th:href="@{/css/projectStyles.css}">
+
+    <title>Словарь</title>
+</head>
+<body>
+<div class="wrapper">
+    <!-- Add a navbar -->
+    <div th:insert="fragments/header"></div>
+
+    <div class="container">
+
+        <!-- Add a title -->
+        <div th:with="uri = ${#httpServletRequest.getRequestURI()}">
+            <h3 th:if="${uri.endsWith('/words/') or uri.endsWith('/search')}" th:insert="fragments/h :: words_main"></h3>
+            <h3 th:if="${uri.endsWith('/easy')}" th:insert="fragments/h :: words_lvl_1"></h3>
+            <h3 th:if="${uri.endsWith('/normal')}" th:insert="fragments/h :: words_lvl_2"></h3>
+            <h3 th:if="${uri.endsWith('/hard')}" th:insert="fragments/h :: words_lvl_3"></h3>
+        </div>
+        <hr>
+
+        <!-- If it's a main word's page, add a description -->
+        <div th:if="${#httpServletRequest.getRequestURI().equals('/words/')}">
+            <div th:insert="fragments/wordsDescription"></div>
+        </div>
+
+        <!-- Add action buttons -->
+        <div th:if="${#httpServletRequest.getRequestURI().startsWith('/words')}"
+             th:insert="fragments/wordsActionBtns"></div>
+
+        <!-- Add a table -->
+        <div th:if="${#httpServletRequest.getRequestURI().startsWith('/words')}"
+             th:insert="fragments/tableWords"></div>
+    </div>
+    <div class="push"></div>
+</div>
+<footer th:insert="fragments/footer"></footer>
+
+</body>
+</html>

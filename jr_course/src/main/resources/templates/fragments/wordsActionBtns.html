@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>WordsActionBtns</title>
+</head>
+<body>
+<div th:fragment="wordsActionBtns" th:remove="tag">
+
+    <!-- Add form with uri depending on the level -->
+    <div th:with="uri = ${#httpServletRequest.getRequestURI().replace('/words', '')}" th:remove="tag">
+        <div th:with="level = ${uri.replace('/search', '')}" th:remove="tag">
+            <form th:action="@{'/words/search'+${uri.equals('/') ? '' : level}}"
+                  class="form-inline">
+
+                <!-- If current URI ends at words/ -> set default word lvl as easy -->
+                <a th:if="${#httpServletRequest.getRequestURI().endsWith('words/')}"
+                   th:href="@{/words/showFormForAddWord(lvl=${#httpServletRequest.getRequestURI().replace('/words/', 'easy')})}"
+                   class="btn btn-primary btn-sm mb-3">
+                    Добавить слово
+                </a>
+
+                <!-- If current URI ends at words/*some_lvl* -> set current word lvl -->
+                <a th:unless="${#httpServletRequest.getRequestURI().endsWith('words/')}"
+                   th:href="@{/words/showFormForAddWord(lvl=${#httpServletRequest.getRequestURI().replace('/words/', '')})}"
+                   class="btn btn-primary btn-sm mb-3">
+                    Добавить слово
+                </a>
+
+                <input class="form-control  ml-5 mr-sm-2 mb-3" type="search" name="word"
+                       placeholder="Поиск слова"/>
+                <button class="btn btn-success mb-3" type="submit">Поиск</button>
+
+                <!-- Add a show all words depending on the level button -->
+                <div th:if="${#httpServletRequest.getParameter('word') != null}">
+                    <a th:href="@{'/words' + ${level.isEmpty() ? '/' : level}}"
+                       class="btn btn-secondary ml-2 mb-3">
+                        Все слова
+                    </a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TableWords</title>
+</head>
+<body>
+<div th:fragment="tableWords" th:remove="tag">
+
+    <!-- Add a table -->
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th>Кандзи</th>
+            <th style="min-width: 100px">Кана</th>
+            <th>Значение</th>
+            <th>Описание</th>
+            <th class="last_th">Действие</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="word : ${words}">
+            <td th:text="${word.jpKanji}"/>
+            <td th:text="${word.jpKana}"/>
+            <td th:text="${word.ruWord}"/>
+            <td th:utext="${#strings.replace(#strings.escapeXml(word.description),
+                'separator','&lt;br&gt;')}"/>
+
+            <td>
+                <a th:href="@{/words/showFormForUpdateWord(wordId=${word.id},lvl=${word.level})}"
+                   class="btn btn-info btn-sm btn_block a_update_btn">
+                    Изменить
+                </a>
+                <a th:href="@{/words/deleteWord(wordId=${word.id},lvl=${word.level})}"
+                   class="btn btn-danger btn-sm btn_block"
+                   onclick="if (!(confirm('Вы действительно хотите удалить слово?'))) return false">
+                    Удалить
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
