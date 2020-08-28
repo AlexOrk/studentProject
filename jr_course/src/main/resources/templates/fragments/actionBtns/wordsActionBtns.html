@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <meta charset="UTF-8">
     <title>WordsActionBtns</title>
@@ -14,20 +16,20 @@
                   class="form-inline">
 
                 <!-- If current URI ends at words/ -> set default word lvl as easy -->
-                <a th:if="${#httpServletRequest.getRequestURI().endsWith('words/')}"
+                <a sec:authorize="hasRole('ADMIN')" th:if="${#httpServletRequest.getRequestURI().endsWith('words/')}"
                    th:href="@{/words/showFormForAddWord(lvl=${#httpServletRequest.getRequestURI().replace('/words/', 'easy')})}"
                    class="btn btn-primary btn-sm mb-3">
                     Добавить слово
                 </a>
 
                 <!-- If current URI ends at words/*some_lvl* -> set current word lvl -->
-                <a th:unless="${#httpServletRequest.getRequestURI().endsWith('words/')}"
-                   th:href="@{/words/showFormForAddWord(lvl=${#httpServletRequest.getRequestURI().replace('/words/', '')})}"
+                <a sec:authorize="hasRole('ADMIN')" th:unless="${#httpServletRequest.getRequestURI().endsWith('words/')}"
+                   th:href="@{/words/showFormForAddWord(lvl=${#httpServletRequest.getRequestURI().replace('/words/lvl/', '')})}"
                    class="btn btn-primary btn-sm mb-3">
                     Добавить слово
                 </a>
 
-                <input class="form-control  ml-5 mr-sm-2 mb-3" type="search" name="word"
+                <input class="form-control ml-3 mr-sm-2 mb-3" type="search" name="word"
                        placeholder="Поиск слова"/>
                 <button class="btn btn-success mb-3" type="submit">Поиск</button>
 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>UsersActionBtns</title>
+</head>
+<body>
+<div th:fragment="usersActionBtns" th:remove="tag">
+
+    <!-- Add form with -->
+
+    <form th:action="@{'/users/searchUser'}" class="form-inline">
+
+        <input class="form-control ml-3 mr-sm-2 mb-3" type="search" name="user"
+               placeholder="Поиск пользователя"/>
+        <button class="btn btn-success mb-3" type="submit">Поиск</button>
+
+        <!-- Add a show all users btn -->
+        <div th:if="${#httpServletRequest.getParameter('user') != null}">
+            <a th:href="@{'/users/showUsers'}"
+               class="btn btn-secondary ml-2 mb-3">
+                Все пользователи
+            </a>
+        </div>
+
+        <div>
+            <a th:href="@{/users/deleteAllUsers}"
+               class="btn btn-danger ml-2 mb-3"
+               onclick="if (!(confirm('Вы действительно хотите удалить всех пользователей?'))) return false">
+                Удалить всех пользователей
+            </a>
+        </div>
+
+    </form>
+</div>
+</body>
+</html>

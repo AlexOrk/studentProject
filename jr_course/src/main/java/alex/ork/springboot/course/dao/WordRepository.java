@@ -7,12 +7,12 @@ import java.util.List;
 
 public interface WordRepository extends JpaRepository<Word, Integer> {
 
-	
+
 	public List<Word> findAll();
 	public List<Word> findAllByLevelContains(String level);
-//	public Word findById();
 
-	// search by word
 	public List<Word> findByJpKanjiContainsOrJpKanaContainsOrRuWordContainsAllIgnoreCase(
 								String kanji, String kana, String ru);
+
+	public List<Word> findAllByUsersDataCollection_Id(int ud);
 }

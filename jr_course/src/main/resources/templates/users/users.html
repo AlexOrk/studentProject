@@ -23,24 +23,17 @@
     <div class="container">
 
         <!-- Add a title -->
-        <div th:with="uri = ${#httpServletRequest.getRequestURI()}">
-            <h3 th:if="${uri.endsWith('/words/') or uri.endsWith('/search')}" th:insert="fragments/h :: words_main"></h3>
-            <h3 th:if="${uri.endsWith('/easy')}" th:insert="fragments/h :: words_lvl_1"></h3>
-            <h3 th:if="${uri.endsWith('/normal')}" th:insert="fragments/h :: words_lvl_2"></h3>
-            <h3 th:if="${uri.endsWith('/hard')}" th:insert="fragments/h :: words_lvl_3"></h3>
+        <div>
+            <h3>Список пользователей сайта</h3>
         </div>
         <hr>
 
-        <!-- If it's a main word's page, add a description -->
-        <div th:if="${#httpServletRequest.getRequestURI().equals('/words/')}"
-             th:insert="fragments/description/wordsDescription">
-        </div>
-
         <!-- Add action buttons -->
-        <div th:insert="fragments/actionBtns/wordsActionBtns"></div>
+        <div th:insert="fragments/actionBtns/usersActionBtns"></div>
 
         <!-- Add a table -->
-        <div th:insert="fragments/tables/tableWords"></div>
+        <div th:insert="fragments/tables/tableUsers"></div>
+
     </div>
     <div class="push"></div>
 </div>

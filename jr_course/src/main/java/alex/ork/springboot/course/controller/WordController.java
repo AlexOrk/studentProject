@@ -1,118 +1,81 @@
 package alex.ork.springboot.course.controller;
 
+import alex.ork.springboot.course.entity.UsersData;
 import alex.ork.springboot.course.entity.Word;
+import alex.ork.springboot.course.service.UsersDataService;
 import alex.ork.springboot.course.service.WordService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
 @RequestMapping("/words")
 public class WordController {
+    // Controller for words section
 
     private Logger logger = LoggerFactory.getLogger(WordController.class);
     private WordService wordService;
+    private UsersDataService usersDataService;
 
     @Autowired
-    public WordController(WordService wordService) {
+    public WordController(WordService wordService, UsersDataService usersDataService) {
         this.wordService = wordService;
+        this.usersDataService = usersDataService;
     }
-
-//    @GetMapping("/words")
-//    public String level(@RequestParam(value = "lvl", required = false) String lvl, Model model) {
-//        String level = "";
-//
-//        if (lvl == null) return "vocabulary/vocabulary";
-//
-//        else if (lvl.equals("easy")) level = "easy";
-//        else if (lvl.equals("normal")) level = "normal";
-//        else if (lvl.equals("hard")) level = "hard";
-//
-//        List<Word> words = wordService.findByLevelContains(level);
-//        for (Word word : words) {
-//            String text = word.getDescription().replaceAll("\n", "separator");
-//            word.setDescription(text);
-//        }
-//        model.addAttribute("words", words);
-//        return "vocabulary/words";
-//    }
 
     @GetMapping("/")
-    public String words(Model model) {
+    public String words(@AuthenticationPrincipal User user, Model model) {
         logger.info("\"/words/\"");
 
+        // check rolls
+        if (user != null && user.getAuthorities().toString().contains("USER")) {
+            UsersData ud = usersDataService.findByUsername(user.getUsername());
+            model.addAttribute("ud", ud);
+        }
         List<Word> words = wordService.findAll();
-
-        for (Word word : words) {
-            String text = word.getDescription().replaceAll("\n", "separator");
-            word.setDescription(text);
-        }
         model.addAttribute("words", words);
+        model.addAttribute("hasLvl", false);
 
-        logger.info("Ready to return \"vocabulary/words\"");
+        logger.info("Return \"vocabulary/words\"");
         return "vocabulary/words";
     }
 
-    @GetMapping("/easy")
-    public String showEasy(Model model) {
-        logger.info("\"/words/easy\"");
 
-        List<Word> words = wordService.findByLevelContains("easy");
-        for (Word word : words) {
-            String text = word.getDescription().replaceAll("\n", "separator");
-            word.setDescription(text);
+    @GetMapping("/lvl/{lvl}")
+    public String showEasy(@AuthenticationPrincipal User user,
+                           @PathVariable String lvl,
+                           Model model) {
+        logger.info("\"/words/lvl/" + lvl + "\"");
+
+        // check rolls
+        if (user != null && user.getAuthorities().toString().contains("USER")) {
+            UsersData ud = usersDataService.findByUsername(user.getUsername());
+            model.addAttribute("ud", ud);
         }
+        List<Word> words = wordService.findByLevelContains(lvl);
         model.addAttribute("words", words);
+        model.addAttribute("hasLvl", true);
 
-        logger.info("Ready to return \"vocabulary/words\"");
-        return "vocabulary/words";
-    }
-
-    @GetMapping("/normal")
-    public String showNormal(Model model) {
-        logger.info("\"/words/normal\"");
-
-        List<Word> words = wordService.findByLevelContains("normal");
-        for (Word word : words) {
-            String text = word.getDescription().replaceAll("\n", "separator");
-            word.setDescription(text);
-        }
-        model.addAttribute("words", words);
-
-        logger.info("Ready to return \"vocabulary/words\"");
-        return "vocabulary/words";
-    }
-
-    @GetMapping("/hard")
-    public String showHard(Model model) {
-        logger.info("\"/words/hard\"");
-
-        List<Word> words = wordService.findByLevelContains("hard");
-        for (Word word : words) {
-            String text = word.getDescription().replaceAll("\n", "separator");
-            word.setDescription(text);
-        }
-        model.addAttribute("words", words);
-
-        logger.info("Ready to return \"vocabulary/words\"");
+        logger.info("Return \"vocabulary/words\"");
         return "vocabulary/words";
     }
 
     @GetMapping("/showFormForAddWord")
     public String showFormForAddWord(@RequestParam("lvl") String lvl, Model model) {
         logger.info("\"/words/showFormForAddWord\"");
+
         Word word = new Word();
         word.setLevel(lvl);
         model.addAttribute("word", word);
 
-        logger.info("Ready to return \"vocabulary/word-form\"");
+        logger.info("Return \"vocabulary/word-form\"");
         return "vocabulary/word-form";
     }
 
@@ -135,6 +98,7 @@ public class WordController {
 
         wordService.save(word);
 
+        logger.info("Word was saved!");
         logger.info("Ready to \"redirect:/words/\"");
         return "redirect:/words/";
     }
@@ -145,12 +109,14 @@ public class WordController {
 
         wordService.deleteById(wordId);
 
+        logger.info("Word was deleted!");
         logger.info("Ready to \"redirect:/words/\"");
         return "redirect:/words/";
     }
 
     @GetMapping("/search")
-    public String search(@RequestParam(value = "word", required = false) String word,
+    public String search(@AuthenticationPrincipal User user,
+                         @RequestParam(value = "word", required = false) String word,
                          Model model) {
         logger.info("\"/words/search\"");
 
@@ -159,101 +125,96 @@ public class WordController {
             return "redirect:/words/";
         }
 
-        List<Word> words = wordService.searchBy(word);
-
-        if (words.isEmpty()) {
-            words = null;
-            logger.info("words = null");
+        // check rolls
+        if (user != null && user.getAuthorities().toString().contains("USER")) {
+            UsersData ud = usersDataService.findByUsername(user.getUsername());
+            model.addAttribute("ud", ud);
         }
 
+        List<Word> words = wordService.searchBy(word);
         model.addAttribute("words", words);
+        model.addAttribute("hasLvl", false);
 
         logger.info("Ready to return \"vocabulary/words\"");
-        return "/vocabulary/words";
-
+        return "vocabulary/words";
     }
 
-    @GetMapping("/search/easy")
-    public String searchEasy(@RequestParam(value = "word", required = false) String word,
+
+    @GetMapping("/search/lvl/{lvl}")
+    public String searchEasy(@AuthenticationPrincipal User user,
+                             @RequestParam(value = "word", required = false) String word,
+                             @PathVariable String lvl,
                              Model model) {
-        logger.info("\"/words/search/easy\"");
+        logger.info("\"/words/search/lvl/" + lvl + "\"");
 
         if (word == null || word.trim().isEmpty()) {
-            logger.info("Ready to \"redirect:/words/\"");
-            return "redirect:/words/easy";
+            logger.info("Ready to \"redirect:/words/lvl/" + lvl + "\"");
+            return "redirect:/words/lvl/" + lvl;
         }
-        List<Word> words = wordService.searchBy(word);
-        List<Word> foundedListByWordAndLevel = new ArrayList<>(words.size());
-        for (Word w : words) {
-            if (w.getLevel().equals("easy"))
-                foundedListByWordAndLevel.add(w);
+
+        // check rolls
+        if (user != null && user.getAuthorities().toString().contains("USER")) {
+            UsersData ud = usersDataService.findByUsername(user.getUsername());
+            model.addAttribute("ud", ud);
         }
-        if (foundedListByWordAndLevel.isEmpty()) {
-            words = null;
-            logger.info("words = null");
-        } else {
-            words = foundedListByWordAndLevel;
-            logger.info("words = foundedListByWordAndLevel");
-        }
+
+        List<Word> words = wordService.findAllByWordAndLevel(word, lvl);
         model.addAttribute("words", words);
+        model.addAttribute("hasLvl", true);
 
         logger.info("Ready to return \"vocabulary/words\"");
-        return "/vocabulary/words";
+        return "vocabulary/words";
     }
 
-    @GetMapping("/search/normal")
-    public String searchNormal(@RequestParam(value = "word", required = false) String word,
-                               Model model) {
-        logger.info("\"/words/search/normal\"");
+    @GetMapping("/addWordInPersonal")
+    public String addWordInPersonal(@AuthenticationPrincipal User user,
+                                    @RequestParam("wordId") int wordId,
+                                    @RequestParam("hasLvl") boolean hasLvl,
+                                    @RequestParam("lvl") String lvl) {
+        logger.info("\"addWordInPersonal\"");
+        logger.info("Add a word in personal vocabulary.");
 
-        if (word == null || word.trim().isEmpty()) {
-            logger.info("Ready to \"redirect:/words/\"");
-            return "redirect:/words/normal";
-        }
-        List<Word> words = wordService.searchBy(word);
-        List<Word> foundedListByWordAndLevel = new ArrayList<>(words.size());
-        for (Word w : words) {
-            if (w.getLevel().equals("normal"))
-                foundedListByWordAndLevel.add(w);
-        }
-        if (foundedListByWordAndLevel.isEmpty()) {
-            words = null;
-            logger.info("words = null");
-        } else {
-            words = foundedListByWordAndLevel;
-            logger.info("words = foundedListByWordAndLevel");
-        }
-        model.addAttribute("words", words);
+        // find word and usersData
+        Word word = wordService.findById(wordId);
+        UsersData ud = usersDataService.findByUsername(user.getUsername());
 
-        logger.info("Ready to return \"vocabulary/words\"");
-        return "/vocabulary/words";
+        // add usersData
+        word.addUsersData(ud);
+
+        // update word
+        wordService.save(word);
+        logger.info("Word was added in personal list!");
+
+        // if it is a lvl page, redirect to lvl page
+        if (hasLvl) return "redirect:/words/lvl/" + lvl;
+
+        logger.info("Ready to \"redirect:/words/\"");
+        return "redirect:/words/";
     }
 
-    @GetMapping("/search/hard")
-    public String searchHard(@RequestParam(value = "word", required = false) String word,
-                             Model model) {
-        logger.info("\"/words/search/hard\"");
+    @GetMapping("/deleteWordFromPersonal")
+    public String deleteWordFromPersonal(@AuthenticationPrincipal User user,
+                                         @RequestParam("wordId") int wordId,
+                                         @RequestParam("hasLvl") boolean hasLvl,
+                                         @RequestParam("lvl") String lvl) {
+        logger.info("\"addWordInPersonal\"");
+        logger.info("Delete word from personal vocabulary into.");
 
-        if (word == null || word.trim().isEmpty()) {
-            logger.info("Ready to \"redirect:/words/\"");
-            return "redirect:/words/hard";
-        }
-        List<Word> words = wordService.searchBy(word);
-        List<Word> foundedListByWordAndLevel = new ArrayList<>(words.size());
-        for (Word w : words) {
-            if (w.getLevel().equals("hard"))
-                foundedListByWordAndLevel.add(w);
-        }
-        if (foundedListByWordAndLevel.isEmpty()) {
-            words = null;
-            logger.info("words = null");
-        } else {
-            words = foundedListByWordAndLevel;
-            logger.info("words = foundedListByWordAndLevel");
-        }
-        model.addAttribute("words", words);
+        // find word and usersData
+        Word word = wordService.findById(wordId);
+        UsersData ud = usersDataService.findByUsername(user.getUsername());
 
-        logger.info("Ready to return \"vocabulary/words\"");
-        return "/vocabulary/words";
+        // delete usersData
+        word.deleteUsersData(ud);
+
+        // update word
+        wordService.save(word);
+        logger.info("Word was deleted from personal list!");
+
+        // if it is a lvl page, redirect to lvl page
+        if (hasLvl) return "redirect:/words/lvl/" + lvl;
+
+        logger.info("Ready to \"redirect:/words/\"");
+        return "redirect:/words/";
     }
 }

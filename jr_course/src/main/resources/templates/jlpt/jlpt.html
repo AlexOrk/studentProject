@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous">
+
+    <!-- Individual CSS -->
+    <link rel="stylesheet" th:href="@{/css/projectStyles.css}">
+
+    <title>Jlpt</title>
+</head>
+<body>
+<div class="wrapper">
+    <!-- Add a navbar -->
+    <div th:insert="fragments/header"></div>
+
+    <div class="container">
+
+        <!-- Add a title -->
+        <div>
+            <h3>JLPT</h3>
+        </div>
+        <hr>
+
+        <!-- Add a description -->
+        <div>
+            <h4>JLPT (日本語能力試験, Japanese Language Proficiency Test, Нихонго Норёку Сикэн)</h4>
+            <p>Нихонго Норёку Сикэн — международный экзамен на определение уровня владения японским языком.</p>
+            <p>В Японии экзамен проводит Японская ассоциация содействия международному образованию, за пределами
+                Японии организацией занимается Японский фонд.</p>
+            <p>В Петербурге экзамен Нихонго Норёку Сикэн проводится два раза в год — в первое воскресенье декабря
+                и первое воскресенье июля.</p>
+            <p>В случае успешной сдачи экзамена, кандидат получает сертификат международного образца, который
+                принимается в большинстве японских организаций и учебных заведений.</p>
+        </div>
+        <div>
+            <h4>Структура экзамена</h4>
+            <p>Экзамен состоит из пяти уровней, от N1 до N5, где N1 самый высокий уровень и N5 самый низкий.</p>
+            <p>Независимо от уровня экзамена, тест состоит из трех частей — Лексика (знание иероглифов); Грамматика
+                и чтение; Аудирование.</p>
+            <p>Образцы заданий Вы можете найти на <a href="https://www.jlpt.jp/">официальном сайте JLPT</a>.</p>
+        </div>
+    </div>
+    <div class="push"></div>
+</div>
+<footer th:insert="fragments/footer"></footer>
+
+</body>
+</html>

@@ -42,6 +42,10 @@ table {
     text-align: center;
 }
 
+th {
+    min-width: 100px;
+}
+
 .last_th {
     width: 100px;
 }
@@ -55,7 +59,7 @@ table {
 }
 
 footer, .push {
-    height: 9rem;
+    height: 10rem;
 }
 
 footer a {

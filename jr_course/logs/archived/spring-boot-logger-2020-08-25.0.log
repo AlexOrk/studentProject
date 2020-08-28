@@ -1,0 +1,439 @@
+2020-08-25 00:01:14,050 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-3] "/words/"
+2020-08-25 00:01:14,056 INFO alex.ork.springboot.course.service.WordServiceImpl [http-nio-8080-exec-3] Find all words in DB ("wordRepository.findAll()")
+2020-08-25 00:01:14,062 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-3] Ready to return "vocabulary/words"
+2020-08-25 00:07:39,988 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CourseApplication on DESKTOP-3UPQ2KB with PID 7068 (C:\Users\matia\Desktop\new\jr_course\target\classes started by matia in C:\Users\matia\Desktop\new\jr_course)
+2020-08-25 00:07:40,003 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-25 00:07:40,044 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\matia\.m2\repository\com\mchange\c3p0\0.9.5.2\c3p0-0.9.5.2.jar referenced one or more files that do not exist: file:/C:/Users/matia/.m2/repository/com/mchange/c3p0/0.9.5.2/mchange-commons-java-0.2.11.jar
+2020-08-25 00:07:40,045 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-25 00:07:40,045 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-25 00:07:40,790 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-08-25 00:07:40,850 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 51ms. Found 3 JPA repository interfaces.
+2020-08-25 00:07:41,388 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-25 00:07:41,397 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-25 00:07:41,397 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-25 00:07:41,397 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-08-25 00:07:41,488 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-25 00:07:41,492 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1447 ms
+2020-08-25 00:07:41,555 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [MLog-Init-Reporter] MLog clients using slf4j logging.
+2020-08-25 00:07:41,591 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [restartedMain] Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2020-08-25 00:07:41,635 INFO alex.ork.springboot.course.config.DataSourceConfig [restartedMain] jdbc.url=jdbc:mysql://localhost:3306/student_directory?useSSL=false&serverTimezone=UTC
+2020-08-25 00:07:41,635 INFO alex.ork.springboot.course.config.DataSourceConfig [restartedMain] jdbc.user=root
+2020-08-25 00:07:41,757 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-25 00:07:41,785 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [restartedMain] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge144ac9ileo71q7nnre|1e48af, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge144ac9ileo71q7nnre|1e48af, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql://localhost:3306/student_directory?useSSL=false&serverTimezone=UTC, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 3000, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {password=******, user=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2020-08-25 00:07:41,949 INFO org.hibernate.jpa.internal.util.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-25 00:07:41,970 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-25 00:07:41,983 INFO org.hibernate.Version [task-1] HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-08-25 00:07:42,067 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [task-1] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-25 00:07:42,107 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4b5307ed, org.springframework.security.web.context.SecurityContextPersistenceFilter@2f6c3f09, org.springframework.security.web.header.HeaderWriterFilter@2c66ec1a, org.springframework.security.web.csrf.CsrfFilter@182e5180, org.springframework.security.web.authentication.logout.LogoutFilter@66b03aa3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@61eec343, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28209c97, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f28e4da, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1add4a43, org.springframework.security.web.session.SessionManagementFilter@4b0e2cc6, org.springframework.security.web.access.ExceptionTranslationFilter@700b825f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7f58636a]
+2020-08-25 00:07:42,149 INFO org.hibernate.dialect.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-08-25 00:07:42,263 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [restartedMain] Adding welcome page: class path resource [static/index.html]
+2020-08-25 00:07:42,407 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-08-25 00:07:42,424 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-25 00:07:42,450 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-25 00:07:42,454 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [restartedMain] Triggering deferred initialization of Spring Data repositories…
+2020-08-25 00:07:42,645 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-25 00:07:42,652 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-25 00:07:42,969 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [restartedMain] Spring Data repositories initialized!
+2020-08-25 00:07:42,981 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started CourseApplication in 3.439 seconds (JVM running for 4.935)
+2020-08-25 00:07:54,525 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-25 00:07:54,526 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-08-25 00:07:54,540 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 14 ms
+2020-08-25 00:07:54,626 INFO alex.ork.springboot.course.controller.GrammarController [http-nio-8080-exec-1] "/grammar/"
+2020-08-25 00:07:54,626 INFO alex.ork.springboot.course.service.GrammarServiceImpl [http-nio-8080-exec-1] Find all grammar in DB ("grammarRepository.findAll()")
+2020-08-25 00:07:54,944 INFO alex.ork.springboot.course.controller.GrammarController [http-nio-8080-exec-1] Ready to return "/grammar/grammar"
+2020-08-25 00:07:57,478 WARN org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [575] milliseconds.
+2020-08-25 00:08:03,018 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-6] "/words/"
+2020-08-25 00:08:03,019 INFO alex.ork.springboot.course.service.WordServiceImpl [http-nio-8080-exec-6] Find all words in DB ("wordRepository.findAll()")
+2020-08-25 00:08:03,033 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-6] Ready to return "vocabulary/words"
+2020-08-25 00:08:07,345 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-8] "/personal/"
+2020-08-25 00:08:11,153 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-10] "/personal/words"
+2020-08-25 00:08:11,227 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-10] Ready to return "personal/personal"
+2020-08-25 00:08:14,470 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-3] "/personal/grammar"
+2020-08-25 00:08:14,507 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-3] Ready to return "personal/personal"
+2020-08-25 00:08:20,662 INFO alex.ork.springboot.course.controller.GrammarController [http-nio-8080-exec-4] "/grammar/n1"
+2020-08-25 00:08:20,666 INFO alex.ork.springboot.course.service.GrammarServiceImpl [http-nio-8080-exec-4] Find all words in DB depending on the "1" jlptLvl ("grammarRepository.findAllByLevelContains(level)")
+2020-08-25 00:08:20,694 INFO alex.ork.springboot.course.controller.GrammarController [http-nio-8080-exec-4] Ready to return "grammar/grammar"
+2020-08-25 00:08:22,525 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-6] "/personal/"
+2020-08-25 00:11:00,906 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-9] "/personal/words"
+2020-08-25 00:11:00,929 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-9] Ready to return "personal/personal"
+2020-08-25 00:11:02,769 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-1] "/personal/grammar"
+2020-08-25 00:11:02,777 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-1] Ready to return "personal/personal"
+2020-08-25 00:11:44,943 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CourseApplication on DESKTOP-3UPQ2KB with PID 1356 (C:\Users\matia\Desktop\new\jr_course\target\classes started by matia in C:\Users\matia\Desktop\new\jr_course)
+2020-08-25 00:11:44,950 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-25 00:11:44,986 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\matia\.m2\repository\com\mchange\c3p0\0.9.5.2\c3p0-0.9.5.2.jar referenced one or more files that do not exist: file:/C:/Users/matia/.m2/repository/com/mchange/c3p0/0.9.5.2/mchange-commons-java-0.2.11.jar
+2020-08-25 00:11:44,986 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-25 00:11:44,987 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-25 00:11:46,089 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-08-25 00:11:46,201 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 94ms. Found 3 JPA repository interfaces.
+2020-08-25 00:11:46,707 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-25 00:11:46,716 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-25 00:11:46,717 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-25 00:11:46,717 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-08-25 00:11:46,839 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-25 00:11:46,839 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1852 ms
+2020-08-25 00:11:46,905 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [MLog-Init-Reporter] MLog clients using slf4j logging.
+2020-08-25 00:11:46,936 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [restartedMain] Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2020-08-25 00:11:46,973 INFO alex.ork.springboot.course.config.DataSourceConfig [restartedMain] jdbc.url=jdbc:mysql://localhost:3306/student_directory?useSSL=false&serverTimezone=UTC
+2020-08-25 00:11:46,973 INFO alex.ork.springboot.course.config.DataSourceConfig [restartedMain] jdbc.user=root
+2020-08-25 00:11:47,067 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-25 00:11:47,092 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [restartedMain] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge144ac9iqnzi14h79lb|6fe3d49a, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge144ac9iqnzi14h79lb|6fe3d49a, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql://localhost:3306/student_directory?useSSL=false&serverTimezone=UTC, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 3000, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {password=******, user=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2020-08-25 00:11:47,261 INFO org.hibernate.jpa.internal.util.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-25 00:11:47,285 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-25 00:11:47,295 INFO org.hibernate.Version [task-1] HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-08-25 00:11:47,378 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [task-1] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-25 00:11:47,415 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7bcb807b, org.springframework.security.web.context.SecurityContextPersistenceFilter@7625ee90, org.springframework.security.web.header.HeaderWriterFilter@19b228ad, org.springframework.security.web.csrf.CsrfFilter@5956b289, org.springframework.security.web.authentication.logout.LogoutFilter@12ea9fa5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@10e28436, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e8d90cd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75fe8100, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@375d56a1, org.springframework.security.web.session.SessionManagementFilter@69fb1fb6, org.springframework.security.web.access.ExceptionTranslationFilter@1ee922e5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4a3dcb2e]
+2020-08-25 00:11:47,474 INFO org.hibernate.dialect.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-08-25 00:11:47,586 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [restartedMain] Adding welcome page: class path resource [static/index.html]
+2020-08-25 00:11:47,707 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-08-25 00:11:47,720 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-25 00:11:47,739 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-25 00:11:47,739 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [restartedMain] Triggering deferred initialization of Spring Data repositories…
+2020-08-25 00:11:47,928 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-25 00:11:47,936 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-25 00:11:48,246 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [restartedMain] Spring Data repositories initialized!
+2020-08-25 00:11:48,255 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started CourseApplication in 3.805 seconds (JVM running for 4.828)
+2020-08-25 00:11:59,428 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-25 00:11:59,428 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-08-25 00:11:59,443 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 15 ms
+2020-08-25 00:11:59,530 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-1] "/words/"
+2020-08-25 00:11:59,530 INFO alex.ork.springboot.course.service.WordServiceImpl [http-nio-8080-exec-1] Find all words in DB ("wordRepository.findAll()")
+2020-08-25 00:11:59,823 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-1] Ready to return "vocabulary/words"
+2020-08-25 00:12:03,393 WARN org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-4] Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [511] milliseconds.
+2020-08-25 00:12:15,288 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-6] "/words/"
+2020-08-25 00:12:15,288 INFO alex.ork.springboot.course.service.WordServiceImpl [http-nio-8080-exec-6] Find all words in DB ("wordRepository.findAll()")
+2020-08-25 00:12:15,295 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-6] Ready to return "vocabulary/words"
+2020-08-25 00:12:19,440 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-8] "/personal/words"
+2020-08-25 00:12:19,507 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-8] Ready to return "personal/personal"
+2020-08-25 00:12:22,284 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-10] "/personal/grammar"
+2020-08-25 00:12:22,317 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-10] Ready to return "personal/personal"
+2020-08-25 00:12:27,449 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-2] "/words/"
+2020-08-25 00:12:27,449 INFO alex.ork.springboot.course.service.WordServiceImpl [http-nio-8080-exec-2] Find all words in DB ("wordRepository.findAll()")
+2020-08-25 00:12:27,464 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-2] Ready to return "vocabulary/words"
+2020-08-25 01:31:10,656 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-5] "/words/"
+2020-08-25 01:31:10,657 INFO alex.ork.springboot.course.service.WordServiceImpl [http-nio-8080-exec-5] Find all words in DB ("wordRepository.findAll()")
+2020-08-25 01:31:10,668 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-5] Ready to return "vocabulary/words"
+2020-08-25 01:31:43,570 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-10] "/words/"
+2020-08-25 01:31:43,570 INFO alex.ork.springboot.course.service.WordServiceImpl [http-nio-8080-exec-10] Find all words in DB ("wordRepository.findAll()")
+2020-08-25 01:31:43,576 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-10] Ready to return "vocabulary/words"
+2020-08-25 01:31:53,988 INFO alex.ork.springboot.course.controller.UsersController [http-nio-8080-exec-2] "/users/showUsers"
+2020-08-25 01:31:53,988 INFO alex.ork.springboot.course.service.UsersDataServiceImpl [http-nio-8080-exec-2] Find all information about user in DB ("usersDataRepository.findAll()")
+2020-08-25 01:31:53,996 INFO alex.ork.springboot.course.controller.UsersController [http-nio-8080-exec-2] Ready to return "users/users"
+2020-08-25 01:32:18,867 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-8] "/words/"
+2020-08-25 01:32:18,868 INFO alex.ork.springboot.course.service.WordServiceImpl [http-nio-8080-exec-8] Find all words in DB ("wordRepository.findAll()")
+2020-08-25 01:32:18,879 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-8] Ready to return "vocabulary/words"
+2020-08-25 01:32:25,894 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-1] "/personal/"
+2020-08-25 01:32:42,390 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-4] "/personal/"
+2020-08-25 01:32:45,144 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-5] "/words/"
+2020-08-25 01:32:45,146 INFO alex.ork.springboot.course.service.WordServiceImpl [http-nio-8080-exec-5] Find all words in DB ("wordRepository.findAll()")
+2020-08-25 01:32:45,157 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-5] Ready to return "vocabulary/words"
+2020-08-25 01:32:46,446 INFO alex.ork.springboot.course.controller.GrammarController [http-nio-8080-exec-7] "/grammar/"
+2020-08-25 01:32:46,447 INFO alex.ork.springboot.course.service.GrammarServiceImpl [http-nio-8080-exec-7] Find all grammar in DB ("grammarRepository.findAll()")
+2020-08-25 01:32:46,467 INFO alex.ork.springboot.course.controller.GrammarController [http-nio-8080-exec-7] Ready to return "/grammar/grammar"
+2020-08-25 01:32:51,377 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-9] "/personal/"
+2020-08-25 01:33:08,214 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-1] "/personal/words"
+2020-08-25 01:33:08,223 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-1] Ready to return "personal/personal"
+2020-08-25 01:33:15,742 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-4] "/words/easy"
+2020-08-25 01:33:15,743 INFO alex.ork.springboot.course.service.WordServiceImpl [http-nio-8080-exec-4] Find all words in DB depending on the "easy" level ("wordRepository.findAllByLevelContains(level)")
+2020-08-25 01:33:15,753 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-4] Ready to return "vocabulary/words"
+2020-08-25 01:33:24,069 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-5] "/words/normal"
+2020-08-25 01:33:24,072 INFO alex.ork.springboot.course.service.WordServiceImpl [http-nio-8080-exec-5] Find all words in DB depending on the "normal" level ("wordRepository.findAllByLevelContains(level)")
+2020-08-25 01:33:24,080 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-5] Ready to return "vocabulary/words"
+2020-08-25 01:33:52,186 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-7] "/personal/words"
+2020-08-25 01:33:52,195 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-7] Ready to return "personal/personal"
+2020-08-25 01:33:59,521 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-9] "/personal/grammar"
+2020-08-25 01:33:59,529 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-9] Ready to return "personal/personal"
+2020-08-25 01:34:05,337 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-1] "/personal/words"
+2020-08-25 01:34:05,344 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-1] Ready to return "personal/personal"
+2020-08-25 01:34:10,032 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-4] "/personal/search/words"
+2020-08-25 01:34:10,035 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-4] Searching for words in the personal list
+2020-08-25 01:34:10,036 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-4] Ready to return "personal/personal"
+2020-08-25 01:34:11,799 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-5] "/personal/search/words"
+2020-08-25 01:34:11,799 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-5] Ready to "redirect:/personal/words"
+2020-08-25 01:34:11,811 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-6] "/personal/words"
+2020-08-25 01:34:11,815 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-6] Ready to return "personal/personal"
+2020-08-25 01:34:17,701 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-8] "/personal/search/words"
+2020-08-25 01:34:17,711 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-8] Searching for words in the personal list
+2020-08-25 01:34:17,712 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-8] wordList = null
+2020-08-25 01:34:17,712 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-8] Ready to return "personal/personal"
+2020-08-25 01:34:19,830 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-10] "/personal/search/words"
+2020-08-25 01:34:19,831 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-10] Ready to "redirect:/personal/words"
+2020-08-25 01:34:19,838 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-1] "/personal/words"
+2020-08-25 01:34:19,846 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-1] Ready to return "personal/personal"
+2020-08-25 01:34:24,144 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-4] "/personal/search/words"
+2020-08-25 01:34:24,150 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-4] Searching for words in the personal list
+2020-08-25 01:34:24,151 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-4] wordList = null
+2020-08-25 01:34:24,152 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-4] Ready to return "personal/personal"
+2020-08-25 01:34:25,827 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-5] "/personal/words"
+2020-08-25 01:34:25,833 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-5] Ready to return "personal/personal"
+2020-08-25 01:34:32,591 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-7] "/personal/search/words"
+2020-08-25 01:34:32,599 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-7] Searching for words in the personal list
+2020-08-25 01:34:32,600 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-7] Ready to return "personal/personal"
+2020-08-25 01:34:40,290 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-9] "/personal/grammar"
+2020-08-25 01:34:40,296 INFO alex.ork.springboot.course.controller.PersonalController [http-nio-8080-exec-9] Ready to return "personal/personal"
+2020-08-25 13:55:38,915 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-7] "/words/"
+2020-08-25 13:55:38,915 INFO alex.ork.springboot.course.service.WordServiceImpl [http-nio-8080-exec-7] Find all words in DB ("wordRepository.findAll()")
+2020-08-25 13:55:38,925 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-7] Ready to return "vocabulary/words"
+2020-08-25 13:55:47,317 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-2] "/words/"
+2020-08-25 13:55:47,318 INFO alex.ork.springboot.course.service.WordServiceImpl [http-nio-8080-exec-2] Find all words in DB ("wordRepository.findAll()")
+2020-08-25 13:55:47,326 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-2] Ready to return "vocabulary/words"
+2020-08-25 13:55:58,737 INFO alex.ork.springboot.course.controller.UsersController [http-nio-8080-exec-3] "/users/showUsers"
+2020-08-25 13:55:58,738 INFO alex.ork.springboot.course.service.UsersDataServiceImpl [http-nio-8080-exec-3] Find all information about user in DB ("usersDataRepository.findAll()")
+2020-08-25 13:55:58,744 INFO alex.ork.springboot.course.controller.UsersController [http-nio-8080-exec-3] Ready to return "users/users"
+2020-08-25 13:58:37,615 INFO alex.ork.springboot.course.controller.UsersController [http-nio-8080-exec-7] "/users/showUsers"
+2020-08-25 13:58:37,616 INFO alex.ork.springboot.course.service.UsersDataServiceImpl [http-nio-8080-exec-7] Find all information about user in DB ("usersDataRepository.findAll()")
+2020-08-25 13:58:37,624 INFO alex.ork.springboot.course.controller.UsersController [http-nio-8080-exec-7] Ready to return "users/users"
+2020-08-25 14:45:38,135 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CourseApplication on DESKTOP-3UPQ2KB with PID 11732 (C:\Users\matia\Desktop\new\jr_course\target\classes started by matia in C:\Users\matia\Desktop\new\jr_course)
+2020-08-25 14:45:38,140 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-25 14:45:38,198 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\matia\.m2\repository\com\mchange\c3p0\0.9.5.2\c3p0-0.9.5.2.jar referenced one or more files that do not exist: file:/C:/Users/matia/.m2/repository/com/mchange/c3p0/0.9.5.2/mchange-commons-java-0.2.11.jar
+2020-08-25 14:45:38,199 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-25 14:45:38,201 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-25 14:45:39,473 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-08-25 14:45:39,547 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 64ms. Found 3 JPA repository interfaces.
+2020-08-25 14:45:40,086 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-25 14:45:40,095 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-25 14:45:40,096 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-25 14:45:40,096 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-08-25 14:45:40,236 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-25 14:45:40,237 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2035 ms
+2020-08-25 14:45:40,304 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [MLog-Init-Reporter] MLog clients using slf4j logging.
+2020-08-25 14:45:40,331 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [restartedMain] Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2020-08-25 14:45:40,392 INFO alex.ork.springboot.course.config.DataSourceConfig [restartedMain] jdbc.url=jdbc:mysql://localhost:3306/student_directory?useSSL=false&serverTimezone=UTC
+2020-08-25 14:45:40,393 INFO alex.ork.springboot.course.config.DataSourceConfig [restartedMain] jdbc.user=root
+2020-08-25 14:45:40,491 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-25 14:45:40,519 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [restartedMain] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge146acadyhuu1gszgf5|4b1f9f76, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge146acadyhuu1gszgf5|4b1f9f76, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql://localhost:3306/student_directory?useSSL=false&serverTimezone=UTC, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 3000, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {password=******, user=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2020-08-25 14:45:40,761 INFO org.hibernate.jpa.internal.util.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-25 14:45:40,817 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-25 14:45:40,845 INFO org.hibernate.Version [task-1] HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-08-25 14:45:41,022 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [task-1] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-25 14:45:41,051 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@65bf5fd5, org.springframework.security.web.context.SecurityContextPersistenceFilter@63d10429, org.springframework.security.web.header.HeaderWriterFilter@1c36607b, org.springframework.security.web.csrf.CsrfFilter@5d81e802, org.springframework.security.web.authentication.logout.LogoutFilter@6660cf7f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@652990ff, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2d906a4c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@487a2216, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f4dd4e1, org.springframework.security.web.session.SessionManagementFilter@4bf65d41, org.springframework.security.web.access.ExceptionTranslationFilter@44e103b5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6b210201]
+2020-08-25 14:45:41,180 INFO org.hibernate.dialect.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-08-25 14:45:41,280 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [restartedMain] Adding welcome page: class path resource [static/index.html]
+2020-08-25 14:45:41,445 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-08-25 14:45:41,465 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-25 14:45:41,492 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-25 14:45:41,494 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [restartedMain] Triggering deferred initialization of Spring Data repositories…
+2020-08-25 14:45:41,824 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-25 14:45:41,831 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-25 14:45:42,145 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [restartedMain] Spring Data repositories initialized!
+2020-08-25 14:45:42,155 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started CourseApplication in 4.603 seconds (JVM running for 5.945)
+2020-08-25 14:46:03,705 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-25 14:46:03,709 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-08-25 14:46:03,726 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 16 ms
+2020-08-25 14:46:04,384 WARN org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [547] milliseconds.
+2020-08-25 14:46:13,713 INFO alex.ork.springboot.course.controller.UsersController [http-nio-8080-exec-4] "/users/showUsers"
+2020-08-25 14:46:13,713 INFO alex.ork.springboot.course.service.UsersDataServiceImpl [http-nio-8080-exec-4] Find all information about user in DB ("usersDataRepository.findAll()")
+2020-08-25 14:46:14,031 INFO alex.ork.springboot.course.controller.UsersController [http-nio-8080-exec-4] Ready to return "users/users"
+2020-08-25 15:00:51,282 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CourseApplication on DESKTOP-3UPQ2KB with PID 9640 (C:\Users\matia\Desktop\new\jr_course\target\classes started by matia in C:\Users\matia\Desktop\new\jr_course)
+2020-08-25 15:00:51,286 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-25 15:00:51,358 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\matia\.m2\repository\com\mchange\c3p0\0.9.5.2\c3p0-0.9.5.2.jar referenced one or more files that do not exist: file:/C:/Users/matia/.m2/repository/com/mchange/c3p0/0.9.5.2/mchange-commons-java-0.2.11.jar
+2020-08-25 15:00:51,359 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-25 15:00:51,359 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-25 15:00:52,520 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-08-25 15:00:52,587 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 57ms. Found 3 JPA repository interfaces.
+2020-08-25 15:00:53,146 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-25 15:00:53,153 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-25 15:00:53,155 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-25 15:00:53,155 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-08-25 15:00:53,269 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-25 15:00:53,270 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1910 ms
+2020-08-25 15:00:53,386 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [MLog-Init-Reporter] MLog clients using slf4j logging.
+2020-08-25 15:00:53,416 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [restartedMain] Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2020-08-25 15:00:53,465 INFO alex.ork.springboot.course.config.DataSourceConfig [restartedMain] jdbc.url=jdbc:mysql://localhost:3306/student_directory?useSSL=false&serverTimezone=UTC
+2020-08-25 15:00:53,466 INFO alex.ork.springboot.course.config.DataSourceConfig [restartedMain] jdbc.user=root
+2020-08-25 15:00:53,566 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-25 15:00:53,603 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [restartedMain] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge146acaei2e910dyqt5|44bf7eb9, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge146acaei2e910dyqt5|44bf7eb9, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql://localhost:3306/student_directory?useSSL=false&serverTimezone=UTC, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 3000, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {password=******, user=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2020-08-25 15:00:53,793 INFO org.hibernate.jpa.internal.util.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-25 15:00:53,816 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-25 15:00:53,833 INFO org.hibernate.Version [task-1] HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-08-25 15:00:53,952 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [task-1] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-25 15:00:53,998 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b591507, org.springframework.security.web.context.SecurityContextPersistenceFilter@4d8bb20b, org.springframework.security.web.header.HeaderWriterFilter@12539cd0, org.springframework.security.web.csrf.CsrfFilter@573d28e0, org.springframework.security.web.authentication.logout.LogoutFilter@3e812c36, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@41daceed, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@cde4b20, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@56d3d31d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72c9f305, org.springframework.security.web.session.SessionManagementFilter@4b4e4adf, org.springframework.security.web.access.ExceptionTranslationFilter@5bf19c8a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4077a650]
+2020-08-25 15:00:54,066 INFO org.hibernate.dialect.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-08-25 15:00:54,210 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [restartedMain] Adding welcome page: class path resource [static/index.html]
+2020-08-25 15:00:54,362 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-08-25 15:00:54,381 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-25 15:00:54,404 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-25 15:00:54,408 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [restartedMain] Triggering deferred initialization of Spring Data repositories…
+2020-08-25 15:00:54,655 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-25 15:00:54,665 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-25 15:00:55,018 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [restartedMain] Spring Data repositories initialized!
+2020-08-25 15:00:55,027 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started CourseApplication in 4.289 seconds (JVM running for 5.65)
+2020-08-25 15:01:00,087 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-25 15:01:00,089 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-08-25 15:01:00,105 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 15 ms
+2020-08-25 15:01:00,767 WARN org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [570] milliseconds.
+2020-08-25 15:01:08,895 INFO alex.ork.springboot.course.controller.UsersController [http-nio-8080-exec-4] "/users/showUsers"
+2020-08-25 15:01:08,896 INFO alex.ork.springboot.course.service.UsersDataServiceImpl [http-nio-8080-exec-4] Find all information about user in DB ("usersDataRepository.findAll()")
+2020-08-25 15:01:09,146 INFO alex.ork.springboot.course.service.UsersDataServiceImpl [http-nio-8080-exec-4] Return all information about user in DB except admin ("usersDataRepository.findAll()")
+2020-08-25 15:01:09,147 INFO alex.ork.springboot.course.controller.UsersController [http-nio-8080-exec-4] Ready to return "users/users"
+2020-08-25 16:39:47,744 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CourseApplication on DESKTOP-3UPQ2KB with PID 17212 (C:\Users\matia\Desktop\new\jr_course\target\classes started by matia in C:\Users\matia\Desktop\new\jr_course)
+2020-08-25 16:39:47,752 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-25 16:39:47,850 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\matia\.m2\repository\com\mchange\c3p0\0.9.5.2\c3p0-0.9.5.2.jar referenced one or more files that do not exist: file:/C:/Users/matia/.m2/repository/com/mchange/c3p0/0.9.5.2/mchange-commons-java-0.2.11.jar
+2020-08-25 16:39:47,851 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-25 16:39:47,851 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-25 16:39:49,038 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-08-25 16:39:49,104 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 57ms. Found 3 JPA repository interfaces.
+2020-08-25 16:39:49,633 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-25 16:39:49,643 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-25 16:39:49,643 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-25 16:39:49,643 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-08-25 16:39:49,805 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-25 16:39:49,809 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1958 ms
+2020-08-25 16:39:49,949 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [MLog-Init-Reporter] MLog clients using slf4j logging.
+2020-08-25 16:39:50,003 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [restartedMain] Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2020-08-25 16:39:50,087 INFO alex.ork.springboot.course.config.DataSourceConfig [restartedMain] jdbc.url=jdbc:mysql://localhost:3306/student_directory?useSSL=false&serverTimezone=UTC
+2020-08-25 16:39:50,091 INFO alex.ork.springboot.course.config.DataSourceConfig [restartedMain] jdbc.user=root
+2020-08-25 16:39:50,231 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-25 16:39:50,258 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [restartedMain] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge14bacai1b3a1hgkdyl|4552d7b6, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge14bacai1b3a1hgkdyl|4552d7b6, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql://localhost:3306/student_directory?useSSL=false&serverTimezone=UTC, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 3000, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {password=******, user=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2020-08-25 16:39:50,604 INFO org.hibernate.jpa.internal.util.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-25 16:39:50,667 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-25 16:39:50,702 INFO org.hibernate.Version [task-1] HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-08-25 16:39:50,845 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [task-1] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-25 16:39:50,853 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3d200d4c, org.springframework.security.web.context.SecurityContextPersistenceFilter@531511bc, org.springframework.security.web.header.HeaderWriterFilter@62dab390, org.springframework.security.web.csrf.CsrfFilter@642fcd41, org.springframework.security.web.authentication.logout.LogoutFilter@2a4c4bea, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@70065123, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e1cbf18, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21acc374, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d912865, org.springframework.security.web.session.SessionManagementFilter@58901c60, org.springframework.security.web.access.ExceptionTranslationFilter@fd1fa08, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@437c3c83]
+2020-08-25 16:39:50,956 INFO org.hibernate.dialect.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-08-25 16:39:51,039 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [restartedMain] Adding welcome page: class path resource [static/index.html]
+2020-08-25 16:39:51,205 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-08-25 16:39:51,224 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-25 16:39:51,250 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-25 16:39:51,252 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [restartedMain] Triggering deferred initialization of Spring Data repositories…
+2020-08-25 16:39:51,559 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-25 16:39:51,563 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-25 16:39:51,919 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [restartedMain] Spring Data repositories initialized!
+2020-08-25 16:39:51,927 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started CourseApplication in 4.79 seconds (JVM running for 6.137)
+2020-08-25 16:40:01,146 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-25 16:40:01,147 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-08-25 16:40:01,161 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 13 ms
+2020-08-25 16:40:01,250 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-1] "/words/"
+2020-08-25 16:40:01,250 INFO alex.ork.springboot.course.service.WordServiceImpl [http-nio-8080-exec-1] Find all words in DB ("wordRepository.findAll()")
+2020-08-25 16:40:01,417 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-1] Ready to return "vocabulary/words"
+2020-08-25 16:40:05,086 WARN org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-3] Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [535] milliseconds.
+2020-08-25 16:40:11,108 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-6] "/words/"
+2020-08-25 16:40:11,109 INFO alex.ork.springboot.course.service.WordServiceImpl [http-nio-8080-exec-6] Find all words in DB ("wordRepository.findAll()")
+2020-08-25 16:40:11,119 INFO alex.ork.springboot.course.controller.WordController [http-nio-8080-exec-6] Ready to return "vocabulary/words"
+2020-08-25 16:40:15,485 INFO alex.ork.springboot.course.controller.UsersController [http-nio-8080-exec-8] "/users/showUsers"
+2020-08-25 16:40:15,487 INFO alex.ork.springboot.course.service.UsersDataServiceImpl [http-nio-8080-exec-8] Find all information about user in DB ("usersDataRepository.findAll()")
+2020-08-25 16:40:15,520 INFO alex.ork.springboot.course.service.UsersDataServiceImpl [http-nio-8080-exec-8] Return all information about user in DB except admin ("usersDataRepository.findAll()")
+2020-08-25 16:40:15,522 INFO alex.ork.springboot.course.controller.UsersController [http-nio-8080-exec-8] Ready to return "users/users"
+2020-08-25 16:40:21,711 INFO alex.ork.springboot.course.controller.UsersController [http-nio-8080-exec-10] "/users/deleteAllUsers"
+2020-08-25 16:40:21,739 INFO alex.ork.springboot.course.service.UsersDataServiceImpl [http-nio-8080-exec-10] Delete all users in DB: ("usersDataRepository.deleteAll()")
+2020-08-25 16:40:21,781 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-10] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: org.hibernate.QueryException: Named parameter not bound : id; nested exception is java.lang.IllegalArgumentException: org.hibernate.QueryException: Named parameter not bound : id] with root cause
+org.hibernate.QueryException: Named parameter not bound : id
+	at org.hibernate.query.internal.QueryParameterBindingsImpl.verifyParametersBound(QueryParameterBindingsImpl.java:210)
+	at org.hibernate.query.internal.AbstractProducedQuery.beforeQuery(AbstractProducedQuery.java:1425)
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1531)
+	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1581)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:196)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:88)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:154)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:142)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor$QueryMethodInvoker.invoke(QueryExecutorMethodInterceptor.java:195)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:152)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:367)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy103.deleteAllExceptAdmin(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:205)
+	at com.sun.proxy.$Proxy73.deleteAllExceptAdmin(Unknown Source)
+	at alex.ork.springboot.course.service.UsersDataServiceImpl.deleteAllExceptAdmin(UsersDataServiceImpl.java:73)
+	at alex.ork.springboot.course.controller.UsersController.deleteAllUsers(UsersController.java:84)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)

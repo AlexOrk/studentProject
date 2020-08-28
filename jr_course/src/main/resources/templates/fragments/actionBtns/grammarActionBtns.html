@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>GrammarActionBtns</title>
+</head>
+<body>
+<div th:fragment="grammarActionBtns" th:remove="tag">
+
+    <!-- Add form with uri depending on the level -->
+    <div th:with="uri = ${#httpServletRequest.getRequestURI().replace('/grammar', '')}" th:remove="tag">
+        <div th:with="level = ${uri.replace('/search', '')}" th:remove="tag">
+            <form th:action="@{'/grammar/search'+${uri.equals('/') ? '' : level}}"
+                  class="form-inline">
+
+                <!-- If current URI ends at grammar/ -> set default grammar lvl as easy -->
+                <a sec:authorize="hasRole('ADMIN')" th:if="${#httpServletRequest.getRequestURI().endsWith('grammar/')}"
+                   th:href="@{/grammar/showFormForAddGrammar(lvl=${#httpServletRequest.getRequestURI().replace('/grammar/', '5')})}"
+                   class="btn btn-primary btn-sm mb-3">
+                    Добавить грамматику
+                </a>
+
+                <!-- If current URI ends at grammar/*some_lvl* -> set current grammar lvl -->
+                <a sec:authorize="hasRole('ADMIN')" th:unless="${#httpServletRequest.getRequestURI().endsWith('grammar/')}"
+                   th:href="@{/grammar/showFormForAddGrammar(lvl=${#httpServletRequest.getRequestURI().replace('/grammar/', '')})}"
+                   class="btn btn-primary btn-sm mb-3">
+                    Добавить грамматику
+                </a>
+
+                <input class="form-control ml-3 mr-sm-2 mb-3" type="search" name="grammar"
+                       placeholder="Поиск слова"/>
+                <button class="btn btn-success mb-3" type="submit">Поиск</button>
+
+                <!-- Add a show all grammar depending on the level button -->
+                <div th:if="${#httpServletRequest.getParameter('grammar') != null}">
+                    <a th:with="lvl = ${#httpServletRequest.getParameter('lvl')}" th:href="@{'/grammar/' + ${lvl == null ? '' : 'n' + lvl}}"
+                       class="btn btn-secondary ml-2 mb-3">
+                        Вся грамматика
+                    </a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

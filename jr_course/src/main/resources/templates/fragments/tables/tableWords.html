@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <meta charset="UTF-8">
     <title>TableWords</title>
@@ -12,10 +14,11 @@
         <thead class="thead-dark">
         <tr>
             <th>Кандзи</th>
-            <th style="min-width: 100px">Кана</th>
+            <th>Кана</th>
             <th>Значение</th>
             <th>Описание</th>
-            <th class="last_th">Действие</th>
+            <th sec:authorize="hasRole('ADMIN')" class="last_th">Действие</th>
+            <th sec:authorize="hasRole('USER')" class="last_th">Действие</th>
         </tr>
         </thead>
 
@@ -25,9 +28,9 @@
             <td th:text="${word.jpKana}"/>
             <td th:text="${word.ruWord}"/>
             <td th:utext="${#strings.replace(#strings.escapeXml(word.description),
-                'separator','&lt;br&gt;')}"/>
+                '&#10','&lt;br&gt;')}"/>
 
-            <td>
+            <td sec:authorize="hasRole('ADMIN')">
                 <a th:href="@{/words/showFormForUpdateWord(wordId=${word.id},lvl=${word.level})}"
                    class="btn btn-info btn-sm btn_block a_update_btn">
                     Изменить
@@ -36,6 +39,19 @@
                    class="btn btn-danger btn-sm btn_block"
                    onclick="if (!(confirm('Вы действительно хотите удалить слово?'))) return false">
                     Удалить
+                </a>
+            </td>
+
+            <td sec:authorize="hasRole('USER')">
+                <a th:if="${word.usersDataCollection.contains(ud)}"
+                   th:href="@{/words/deleteWordFromPersonal(wordId=${word.id},lvl=${word.level},hasLvl=${hasLvl})}"
+                   class="btn btn-danger btn-sm btn_block">
+                    Удалить
+                </a>
+                <a th:unless="${word.usersDataCollection.contains(ud)}"
+                   th:href="@{/words/addWordInPersonal(wordId=${word.id},lvl=${word.level},hasLvl=${hasLvl})}"
+                   class="btn btn-info btn-sm btn_block a_update_btn">
+                    Добавить
                 </a>
             </td>
         </tr>

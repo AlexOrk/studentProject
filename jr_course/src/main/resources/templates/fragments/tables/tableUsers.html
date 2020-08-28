@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>TableGrammar</title>
+</head>
+<body>
+<div th:fragment="tableUsers" th:remove="tag">
+
+    <!-- Add a table -->
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th>Пользователь</th>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Почта</th>
+            <th class="last_th">Действие</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="user : ${users}">
+            <td th:text="${user.username}"/>
+            <td th:text="${user.firstname}"/>
+            <td th:text="${user.lastname}"/>
+            <td th:utext="${user.mail}"/>
+
+            <td>
+                <a th:href="@{/users/deleteUser(userId=${user.id})}"
+                   class="btn btn-danger btn-sm btn_block"
+                   onclick="if (!(confirm('Вы действительно хотите удалить пользователя?'))) return false">
+                    Удалить
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

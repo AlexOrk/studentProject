@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>TableGrammar</title>
+</head>
+<body>
+<div th:fragment="tableGrammar" th:remove="tag">
+
+    <!-- Add a table -->
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th>Уровень</th>
+            <th>Формула</th>
+            <th>Примеры</th>
+            <th>Описание</th>
+            <th sec:authorize="hasRole('ADMIN')" class="last_th">Действие</th>
+            <th sec:authorize="hasRole('USER')" class="last_th">Действие</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="gr : ${grammar}">
+            <td th:text="${gr.jlptLvl}"/>
+            <td th:text="${gr.formula}"/>
+            <td th:utext="${#strings.replace(#strings.escapeXml(gr.example),
+                '&#10','&lt;br&gt;')}"/>
+            <td th:utext="${#strings.replace(#strings.escapeXml(gr.description),
+                '&#10','&lt;br&gt;')}"/>
+
+            <td sec:authorize="hasRole('ADMIN')">
+                <a th:href="@{/grammar/showFormForUpdateGrammar(grammarId=${gr.id},lvl=${gr.jlptLvl})}"
+                   class="btn btn-info btn-sm btn_block a_update_btn">
+                    Изменить
+                </a>
+                <a th:href="@{/grammar/deleteGrammar(grammarId=${gr.id},lvl=${gr.jlptLvl})}"
+                   class="btn btn-danger btn-sm btn_block"
+                   onclick="if (!(confirm('Вы действительно хотите удалить грамматику?'))) return false">
+                    Удалить
+                </a>
+            </td>
+
+            <td sec:authorize="hasRole('USER')">
+                <a th:if="${gr.usersDataCollection.contains(ud)}"
+                   th:href="@{/grammar/deleteGrammarFromPersonal(grammarId=${gr.id},lvl=${gr.jlptLvl},hasLvl=${hasLvl})}"
+                   class="btn btn-danger btn-sm btn_block">
+                    Удалить
+                </a>
+
+                <a th:unless="${gr.usersDataCollection.contains(ud)}"
+                   th:href="@{/grammar/addGrammarInPersonal(grammarId=${gr.id},lvl=${gr.jlptLvl},hasLvl=${hasLvl})}"
+                   class="btn btn-info btn-sm btn_block a_update_btn">
+                    Добавить
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

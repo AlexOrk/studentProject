@@ -1,6 +1,8 @@
 package alex.ork.springboot.course.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="word")
@@ -13,19 +15,26 @@ public class Word {
 
 	@Column(name="level")
 	private String level;
-	
+
 	@Column(name="jp_kanji")
 	private String jpKanji;
-	
+
 	@Column(name="jp_kana")
 	private String jpKana;
-	
+
 	@Column(name="ru_word")
 	private String ruWord;
 
 	@Column(name="description")
 	private String description;
-	
+
+	@ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE,
+												   CascadeType.DETACH, CascadeType.REFRESH})
+	@JoinTable(name = "word_users_data",
+			joinColumns = @JoinColumn(name = "word_id"),
+			inverseJoinColumns = @JoinColumn(name = "users_id"))
+	private List<UsersData> usersDataCollection;
+
 
 	public Word() {}
 
@@ -35,6 +44,27 @@ public class Word {
 		this.jpKana = jpKana;
 		this.ruWord = ruWord;
 		this.description = description;
+	}
+
+	public Word(String level, String jpKanji, String jpKana, String ruWord, String description,
+				List<UsersData> usersDataCollection) {
+		this.level = level;
+		this.jpKanji = jpKanji;
+		this.jpKana = jpKana;
+		this.ruWord = ruWord;
+		this.description = description;
+		this.usersDataCollection = usersDataCollection;
+	}
+
+	public void addUsersData(UsersData usersData) {
+		if (usersDataCollection == null)
+			usersDataCollection = new ArrayList<>();
+		usersDataCollection.add(usersData);
+	}
+
+	public void deleteUsersData(UsersData usersData) {
+		if (usersDataCollection != null)
+			usersDataCollection.remove(usersData);
 	}
 
 	public int getId() {
@@ -83,6 +113,14 @@ public class Word {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public List<UsersData> getUsersDataCollection() {
+		return usersDataCollection;
+	}
+
+	public void setUsersDataCollection(List<UsersData> usersDataCollection) {
+		this.usersDataCollection = usersDataCollection;
 	}
 
 	@Override
