@@ -51,7 +51,8 @@ Technologies used in the project
 - Logging is done using `Logback`.
 ---
 
-###Note
+Note
+---
 
 Responsive and adaptive web design is not supported yet.
 The connection to the database is done in the `application.properties` file.
